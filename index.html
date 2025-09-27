@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>TailWind</title>
+    <style>
+        @import 'tailwindcss/base';
+        @import 'tailwindcss/components';
+        @import 'tailwindcss/utilities';
+
+        .dropdown-menu{
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .dropdown:hover .dropdown-menu{
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .menu-link{
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .arrow{
+            transform: rotate(180deg);
+        }
+
+        .arrow{
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
 <body class="bg-black">
     <h1 class="text-3xl font-bold underline text-orange-400">
